@@ -72,7 +72,7 @@ export default class WhatNowApp extends React.Component {
     }
   };
   render() {
-    const title = "WhatNow? - YetAnotherToDoApp";
+    const title = "WhatNow?"; 
     const supercomputerName = supercomputers[random].name;
     const supercomputerUrl = supercomputers[random].url;
 
@@ -83,18 +83,25 @@ export default class WhatNowApp extends React.Component {
           supercomputerName={supercomputerName}
           supercomputerUrl={supercomputerUrl}
         />
+        <div className="container">
         <Action
           hasOptions={this.state.options.length > 0}
           whatNow={this.whatNow}
         />
-        <Options
-          options={this.state.options}
-          handleDeleteOptions={this.handleDeleteOptions}
-          handleDeleteOption={this.handleDeleteOption}
-        />
-        <AddOption 
-          handleAddOption={this.handleAddOption}
-        />
+        <div className="widget">
+          <Options
+            options={this.state.options}
+            handleDeleteOptions={this.handleDeleteOptions}
+            handleDeleteOption={this.handleDeleteOption}
+          />
+          <AddOption 
+            handleAddOption={this.handleAddOption}
+          />
+          </div>
+        </div>
+        <div className="footer">
+          <p>built with ❤ in Berlin</p>
+        </div>
         <OptionModal 
           selectedOption={this.state.selectedOption}
           handleClearSelectedOption={this.handleClearSelectedOption}

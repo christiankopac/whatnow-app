@@ -1,0 +1,43 @@
+.big-button {
+  background-color: $sand;
+  border: none;
+  border-bottom: .6rem solid darken($sand, 15%);
+  color: darken($soft-pink, 50%);
+  font-weight: bold;
+  font-size: $l-size;
+  margin-bottom: $m-size;
+  padding: 2.4rem;
+  width: 100%;
+}
+.big-button:disabled {
+  opacity: .5;
+}
+.big-button:hover {
+  background: darken($sand, 25%);
+  border-bottom: .6rem solid darken($sand, 10%);
+  transition: all .2s ease-in-out;
+}
+@media (min-width: $desktop-breakpoint){
+  .big-button {
+    margin-bottom: $xl-size;
+  }
+}
+// button
+.button {
+  background: $sand;
+  border: none;
+  border-bottom: .3rem solid darken($sand, 15%);
+  color: darken($soft-pink, 50%);
+  font-weight: 500;
+  padding: $s-size;
+}
+.button--link {
+  background: none;
+  border: none;
+  color: darken($soft-pink, 50%);
+  padding: 0;
+}
+.button:hover {
+  color: darken($soft-pink, 25%);
+  transition: color .24s ease-in-out;
+}
